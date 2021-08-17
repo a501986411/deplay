@@ -1,0 +1,32 @@
+version: '3'
+services: 
+    php74-fpm:
+        build: ./php7.4
+        image:  heiniuer/php74-fpm:local
+        networks: 
+            - dev-networks
+        container_name:  php74-fpm
+        restart: always
+        ports:
+            - "9000:9000"
+        volumes:
+            - "/data:/data"
+        cap_add:
+            - ALL
+    nginx:
+        build: ./nginx
+        image: heiniuer/nginx:1.0.0
+        depends_on:
+            -  php74-fpm
+        networks:
+            - dev-networks
+        container_name: nginx
+        restart: always
+        ports:
+            - "80:80"
+        volumes:
+            - "/data:/data"
+networks:
+    dev-networks:
+        driver: bridge
+        

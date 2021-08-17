@@ -1,0 +1,17 @@
+开发环境部署项目
+
+目录结构准备
+/data/src
+/data/logs/nginx
+/data/config
+
+阿波罗:
+配置host：
+106.53.5.215 dev-apollo-cs.vipthink.cn
+
+新增项目步骤:
+1.新增一份nginx配置文件 xxx.conf
+2./data/src 目录下面git clone 代码
+3. 修改 php7.4/start.sh 文件中启动阿波罗客户端命令
+nohup ./apollo_client.bin server -a poster-open-api,【增加新项目的appid】 -e dev -l 1 -c /data/config >> /dev/null 2>&1 &
+
