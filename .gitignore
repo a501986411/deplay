@@ -9,3 +9,4 @@ nginx/conf.d/local.vipthink.cn.conf
 .idea/misc.xml
 .idea/modules.xml
 .idea/php.xml
+local_readme
