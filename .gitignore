@@ -4,6 +4,7 @@ nginx/conf.d/local-poster-api.vipthink.cn.conf
 nginx/conf.d/local-poster-rpc.klzz.work.conf
 nginx/conf.d/local-sales-wdmm-api.vipthink.cn.conf
 nginx/conf.d/local.vipthink.cn.conf
+nginx/conf.d/local-wdmama-api.hp-lb.cn.conf
 .idea/.gitignore
 .idea/deplay.iml
 .idea/misc.xml
