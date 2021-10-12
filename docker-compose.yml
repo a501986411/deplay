@@ -19,7 +19,10 @@ services:
         depends_on:
             -  php74-fpm
         networks:
-            - dev-networks
+             dev-networks:
+                aliases:
+                 - ad-apidev.xmp.ai
+                 - web-apidev.xmp.ai
         container_name: nginx
         restart: always
         ports:
